@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "028399ae-0846-4180-90c0-c5d25eaf3231",
+		"name": "upVote",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29782867"
+	},
+	"item": [
+		{
+			"name": "User End Points",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"ali\",\r\n    \"email\":\"ali@gmail.com\",\r\n    \"password\":\"ali#123\",\r\n    \"age\":20,\r\n    \"gender\":\"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/SignUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"SignUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"omakobro567@gmail.com\",\r\n    \"password\":\"omar#123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTY2YjRhMzQ4NWExYzc0MmU5ZDI5YyIsInVzZXJFbWFpbCI6Im9tYWtvYnJvNTY3QGdtYWlsLmNvbSIsImlhdCI6MTcwNTUwMjEzOSwiZXhwIjoxNzA1Njc0OTM5fQ.EK8v1qDBXtBCYDz64jiV6FJ3Qgt0nv8uGDTDpYsC2bc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Omar13\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTdlYmMxNjM0NzdlYzliNzI2MmQxYSIsInVzZXJFbWFpbCI6ImFsaUBnbWFpbC5jb20iLCJpYXQiOjE3MDU1MDM2OTgsImV4cCI6MTcwNTY3NjQ5OH0.Lo1sG6lpJcrPAMRxp-JAtN9TxQc6Zp7Ifsb8bmkUpEs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/deleteUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTY2YjRhMzQ4NWExYzc0MmU5ZDI5YyIsInVzZXJFbWFpbCI6Im9tYWtvYnJvNTY3QGdtYWlsLmNvbSIsImlhdCI6MTcwNTUwMjEzOSwiZXhwIjoxNzA1Njc0OTM5fQ.EK8v1qDBXtBCYDz64jiV6FJ3Qgt0nv8uGDTDpYsC2bc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/getUserInfo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"getUserInfo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product End Points",
+			"item": [
+				{
+					"name": "add Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTdlYmI5NjM0NzdlYzliNzI2MmQxNyIsInVzZXJFbWFpbCI6ImFobWVkQGdtYWlsLmNvbSIsImlhdCI6MTcwNTUyNjc2NCwiZXhwIjoxNzA1Njk5NTY0fQ.I6AHuAhbmxhp40qXBoAeVn-uWNTHppthi3p7y9d7rg8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Product4",
+									"type": "text"
+								},
+								{
+									"key": "caption",
+									"value": "This Is Product No.4",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP/OneDrive/الصور/skye.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/product/addProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTdlYmI5NjM0NzdlYzliNzI2MmQxNyIsInVzZXJFbWFpbCI6ImFobWVkQGdtYWlsLmNvbSIsImlhdCI6MTcwNTUyNjc2NCwiZXhwIjoxNzA1Njk5NTY0fQ.I6AHuAhbmxhp40qXBoAeVn-uWNTHppthi3p7y9d7rg8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"onModel\":\"Product\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product/likeProduct/65a842c7e9ad07127287b09f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"likeProduct",
+								"65a842c7e9ad07127287b09f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTdlYmI5NjM0NzdlYzliNzI2MmQxNyIsInVzZXJFbWFpbCI6ImFobWVkQGdtYWlsLmNvbSIsImlhdCI6MTcwNTUyNjc2NCwiZXhwIjoxNzA1Njk5NTY0fQ.I6AHuAhbmxhp40qXBoAeVn-uWNTHppthi3p7y9d7rg8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product/deleteProduct/65a8f700b236d10934436d32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"deleteProduct",
+								"65a8f700b236d10934436d32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all like for a product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTdlYmI5NjM0NzdlYzliNzI2MmQxNyIsInVzZXJFbWFpbCI6ImFobWVkQGdtYWlsLmNvbSIsImlhdCI6MTcwNTUyNjc2NCwiZXhwIjoxNzA1Njk5NTY0fQ.I6AHuAhbmxhp40qXBoAeVn-uWNTHppthi3p7y9d7rg8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product/getlikes/65a842c7e9ad07127287b09f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"getlikes",
+								"65a842c7e9ad07127287b09f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
